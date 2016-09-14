@@ -26,7 +26,7 @@ Con la descripción anterior un depositador puede colocar un articulo en ella de
 
 ---
 
-**Captura de Pantalla:**
+**Captura de Pantalla:**  
 ![alt text](https://github.com/DavidPDP/Bodega/blob/master/Imagenes/Captura.PNG "Resultado de la solución")  
 
 ---
