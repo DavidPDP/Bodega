@@ -14,7 +14,7 @@ Con la descripción anterior un depositador puede colocar un articulo en ella de
 ---
 
 **Diagrama de Clases:** 
-![alt text](https://github.com/DavidPDP/Bodega/blob/master/Clase.PNG "Diagrama de Clases Bodega")
+![alt text](https://github.com/DavidPDP/Bodega/blob/master/Imagenes/Clase.PNG "Diagrama de Clases Bodega")  
 
 ---
 
@@ -27,5 +27,6 @@ Con la descripción anterior un depositador puede colocar un articulo en ella de
 ---
 
 **Captura de Pantalla:**
-![alt text](https://github.com/DavidPDP/Bodega/blob/master/Captura.PNG "Resultado de la solución")
+![alt text](https://github.com/DavidPDP/Bodega/blob/master/Imagenes/Captura.PNG "Resultado de la solución")  
+
 ---
