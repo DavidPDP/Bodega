@@ -1,7 +1,7 @@
 # Bodega
 
 ###Tarea de Sistemas Operacionales.
-####Integrantes: Jose Luis Sacanamboy y Johan David Ballesteros.
+####Integrantes: Andrés Felipe Piñeros y Johan David Ballesteros.
 ####Descripción: Un proceso donde concurrentemente dos actores realizan acciones sobre una bodega con unas restricciones.
 ---
 **Actores:** Recolector **(R)** y Depositador **(D)**.
