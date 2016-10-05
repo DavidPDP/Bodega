@@ -1,4 +1,4 @@
-package packRikolino;
+package logica;
 
 import java.util.Random;
 
