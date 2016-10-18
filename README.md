@@ -18,7 +18,7 @@ Con la descripción anterior un depositador puede colocar un articulo en ella de
 
 ---
 
-**Funcionamiento:** La solución que se realizó se basó en la creación de dos hilos, los cuales consumiran los servicios a los que corresponden, **R** o **D**, cada uno con sus restricciones de interacción con el sistema. El depositador puede alojar la cantidad de articulos de cualquier tipo que desee siempre y cuando tenga en cuenta la restricción de que la bodega solo puede soportar 200m^3, por lo tanto si no se llega a cumplir el depositador tiene que esperar activamente hasta que haya espacio. Mientras que el recolector puede crear los paquetes que desee siempre y cuando hayan 3 articulos de tipo uno y 4 del tipo 2, sino se cumplen que haya esta cantidad, el recolector espera activamente hasta que en la bodega se encuentren los tipos especificados. Existe una clase principal que es la encargada de coordinar todo el proceso explicado anteriormente.  
+**Funcionamiento Activo:** La solución que se realizó se basó en la creación de dos hilos, los cuales consumiran los servicios a los que corresponden, **R** o **D**, cada uno con sus restricciones de interacción con el sistema. El depositador puede alojar la cantidad de articulos de cualquier tipo que desee siempre y cuando tenga en cuenta la restricción de que la bodega solo puede soportar 200m^3, por lo tanto si no se llega a cumplir el depositador tiene que esperar activamente hasta que haya espacio. Mientras que el recolector puede crear los paquetes que desee siempre y cuando hayan 3 articulos de tipo uno y 4 del tipo 2, sino se cumplen que haya esta cantidad, el recolector espera activamente hasta que en la bodega se encuentren los tipos especificados. Existe una clase principal que es la encargada de coordinar todo el proceso explicado anteriormente.  
 
 **Solución:** Existe una clase principal que es la encargada de inicializar el proceso, esto se refiere a los hilos Recolector y Depositador, esto a su vez se encarga de todo momento solicitar los servicios de sus perfiles al principal. El principal expone los servicios que se encuentran en la clase bodega, esta se encarga de realizar las validaciones de las restricciones que tiene cada servicio, como también de contabilizar y brindar la capacidad del almacén en el momento. Finalmente los actores poseen randoms para la espera (se duerme el hilo por un tiempo random máximo de 3 segundos), y el actor **D** posee otro random que es el encargado de definirle el tipo de producto a depositar en la bodega.
 
@@ -28,5 +28,16 @@ Con la descripción anterior un depositador puede colocar un articulo en ella de
 
 **Captura de Pantalla:**  
 ![alt text](https://github.com/DavidPDP/Bodega/blob/master/Imagenes/Captura.PNG "Resultado de la solución")  
+
+---
+
+**Funcionamiento Semaforo:** La variación de la solución se realizó con semaforos, para poder lograr detener la espera activa, la cual consume recursos innecesariamente. Para esto se utilizaron dos semaforos: uno para manejar el espacio en bodega y el otro para manejar la cantidad de paquetes. Se utiliza el método synchronized, para evitar que dos hilos acceden al mismo tiempo al bloque de código, lo anterior cumple la misma función que el semaforo "mux". Ahora se sigue los métodos depositar en bodega, el cual si hay espacio, le solicita al semaforo la cantidad del peso del producto a depositar (adquirir recursos del semaforo). Siguiente a esto, se aumenta la cantidad del tipo de producto en la bodega. Finalmente procede a mermar espacio en la bodega y liberar un paquete en el semaforo de paquetes. 
+
+El método descargar se encarga entonces de solicitar un paquete al semaforo de paquetes y procede armar el paquete. Finalmente libera espacio en la bodega por medio del semaforo de espacio en bodega.
+
+---
+
+**Captura de Pantalla:**
+![alt text](https://github.com/DavidPDP/Bodega/blob/master/Imagenes/Semaforo.PNG "Resultado de la solución")
 
 ---
