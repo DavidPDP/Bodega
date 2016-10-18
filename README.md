@@ -38,6 +38,7 @@ El método descargar se encarga entonces de solicitar un paquete al semaforo de 
 ---
 
 **Captura de Pantalla:**
+
 ![alt text](https://github.com/DavidPDP/Bodega/blob/master/Imagenes/Semaforo.PNG "Resultado de la solución")
 
 ---
