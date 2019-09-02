@@ -1,3 +1,5 @@
 # Final Code
 
-![diagram class](https://github.com/DavidPDP/Bodega/tree/master/FinalCode/Warehouse Class Diagram.png)
+![diagram class](https://github.com/DavidPDP/Bodega/blob/master/FinalCode/Warehouse%20Class%20Diagram.png)
+
+
