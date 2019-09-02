@@ -1,8 +1,8 @@
 # Bodega
 
-###Tarea de Sistemas Operacionales.
-####Integrantes: Andrés Felipe Piñeros y Johan David Ballesteros.
-####Descripción: Un proceso donde concurrentemente dos actores realizan acciones sobre una bodega con unas restricciones.
+### Tarea de Sistemas Operacionales.
+#### Integrantes: Andrés Felipe Piñeros y Johan David Ballesteros.
+#### Descripción: Un proceso donde concurrentemente dos actores realizan acciones sobre una bodega con unas restricciones.
 ---
 **Actores:** Recolector **(R)** y Depositador **(D)**.
 **Problema:** En una bodega existe un proceso de realización de paquetes de artículos. Existen dos tipos de articulos.  
