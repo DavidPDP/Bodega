@@ -1,0 +1,25 @@
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
+  xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
+  name="Sender">
+
+  <service name="r" promote="client/r">
+    <interface.java interface="java.lang.Runnable" />
+  </service>
+
+  <component name="client">
+
+    <service name="r">
+      <interface.java interface="java.lang.Runnable" />
+    </service>
+
+    <reference name="warehouseServices">
+      <frascati:binding.rmi host="localhost" serviceName="warehouse-services" port="1099"/>
+    </reference>
+
+    <implementation.java class="co.edu.icesi.arquisoft.core.EntryPoint" />
+	
+	<property name="workerType">PremiumSenderWorker</property>
+	
+  </component>
+
+</composite>
